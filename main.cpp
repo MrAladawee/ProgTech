@@ -126,21 +126,15 @@ int main()
     list->x = 123;
     list->next = nullptr;
 
-    append(list, 12);
-    append(list, 12);
-    print_list(list);
+    append(list, 12); append(list, 12); print_list(list);
     cout << endl;
 
 
-    push(list, 0, 0);
-    push(list, 444, 4);
-    push(list, 111, 1);
-    print_list(list);
+    push(list, 0, 0); push(list, 444, 4); push(list, 111, 1); print_list(list);
     cout << endl;
 
 
-    pop(list, 0);
-    print_list(list);
+    pop(list, 0); print_list(list);
     cout << endl;
 
 
