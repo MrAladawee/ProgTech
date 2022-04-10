@@ -32,11 +32,11 @@ bool __brackets(elem*& stack, char bracket_2) {
     return false;
 }
 
-void check_math_expression(const char* exp) {
+int check_math_expression(const char* exp) {
 
     //  Initialization
-    int amount_of_brackets = 0;
     elem* stack = nullptr;
+    int index_open_bracket = -1;
 
     // Main part
     for (int index = 0; index < strlen(exp); index++) {
@@ -44,7 +44,7 @@ void check_math_expression(const char* exp) {
         // [, {, <, ( - adding this elements to stack
         if (__is_open_bracket(exp[index])) {
             push(stack, exp[index]);
-            amount_of_brackets++;
+            index_open_bracket = index;
             continue;
         }
 
@@ -53,17 +53,23 @@ void check_math_expression(const char* exp) {
             //print(stack);
             // Extra ()}
             if (stack == nullptr) {
-                cout << index + 1; return;
+                return index+1;
             }
 
-            // (], {>, ...
+                // (], {>, ...
             else {
-                if (!__brackets(stack, exp[index])) {
-                    cout << index + 1; return;
+                if (!__brackets(stack,exp[index])) {
+                    return index+1;
                 }
             }
         }
     }
+
+    if (stack != nullptr) {
+        return index_open_bracket+1;
+    }
+
+    return 0;
 }
 
 int main() {
@@ -71,5 +77,10 @@ int main() {
     cin >> exp;
     //cout << exp << endl << endl;
 
-    check_math_expression(exp);
+    if (check_math_expression(exp) != 0) {
+        cout << "This math expression is bad. Bad index: " << check_math_expression(exp);
+    }
+    else {
+        cout << "Math expression is good.";
+    }
 }
