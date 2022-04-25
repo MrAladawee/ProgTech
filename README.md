@@ -1,4 +1,4 @@
-# ProgTech
+# 05-107, Брюхин Андрей.
 Programming technology
 
 dz_2 - Stack task.  
