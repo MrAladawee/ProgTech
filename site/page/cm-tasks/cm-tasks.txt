@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вып.Задания</title>
+
+    <link rel = "stylesheet" href = "../../assets/css/style.css">
+    <link rel = "stylesheet" href = "../menu-tasks/assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo--black">ReshDZ</div>
+
+            <nav class="nav">
+                <a class="btn" href="../../index.cgi">Назад</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="menu-tasks">
+    <div class="container">
+
+        <div class="tasks">
+<!--#TASKS-->
+        </div> <!-- tasks -->
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="footer__inner">
+
+            <div class="footer__item">
+                <div class="footer__text>">&copy; Андрей Брюхин</div>
+            </div>
+
+            <div class="footer__item">
+                <div class="footer__text>">Почта: ADBryukhin@stud.kpfu.ru</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
