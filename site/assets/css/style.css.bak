@@ -369,11 +369,7 @@ a {
     color: #fff;
 }
 
-/* Expression */
 
-.expression {
-    padding: 200px 200px
-}
 
 
 
